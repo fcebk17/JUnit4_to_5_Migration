@@ -29,12 +29,6 @@
         </dependency>
 
         <!-- JUnit 4 -->
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.13.2</version>
-            <scope>test</scope>
-        </dependency>
     </dependencies>
 
     <build>
@@ -42,6 +36,24 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.openrewrite.maven</groupId>
+                <artifactId>rewrite-maven-plugin</artifactId>
+                <version>5.33.0</version>
+                <configuration>
+
+                    <activeRecipes>
+                        <recipe>org.openrewrite.java.testing.junit5.JUnit4to5Migration</recipe>
+                    </activeRecipes>
+                </configuration>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.openrewrite.recipe</groupId>
+                        <artifactId>rewrite-testing-frameworks</artifactId>
+                        <version>2.11.0</version>
+                    </dependency>
+                </dependencies>
             </plugin>
         </plugins>
     </build>
