@@ -56,12 +56,6 @@
             <artifactId>rewrite-test</artifactId>
             <scope>test</scope>
         </dependency>
-
-        <dependency>
-            <groupId>ntou.cse.soselab</groupId>
-            <artifactId>JUnit4_to_5_Migration</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-        </dependency>
     </dependencies>
     <dependencyManagement>
         <dependencies>
@@ -77,10 +71,6 @@
 
     <build>
         <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
             <plugin>
                 <groupId>org.openrewrite.maven</groupId>
                 <artifactId>rewrite-maven-plugin</artifactId>
