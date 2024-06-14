@@ -39,16 +39,23 @@
         <dependency>
             <groupId>org.openrewrite</groupId>
             <artifactId>rewrite-java</artifactId>
+            <version>7.35.0</version>
         </dependency>
 
         <dependency>
             <groupId>org.openrewrite</groupId>
             <artifactId>rewrite-yaml</artifactId>
+            <version>7.35.0</version>
         </dependency>
 
         <dependency>
             <groupId>org.openrewrite.recipe</groupId>
             <artifactId>rewrite-java-dependencies</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.openrewrite.recipe</groupId>
+            <artifactId>rewrite-spring</artifactId>
         </dependency>
 
         <dependency>
