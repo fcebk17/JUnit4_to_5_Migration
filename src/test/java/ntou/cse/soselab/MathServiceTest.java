@@ -2,18 +2,23 @@ package ntou.cse.soselab;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit.jupiter.SpringExtension;
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
 
-@ExtendWith(SpringExtension.class)
-@SpringBootTest
 public class MathServiceTest {
 
-    @Autowired
     private MathService mathService;
+
+    @Before
+    public void setUp() {
+        mathService = new MathService();
+    }
+
+    @After
+    public void tearDown() {
+        mathService = null;
+    }
 
     @Test
     public void testAdd() {
